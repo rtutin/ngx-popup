@@ -1,0 +1,15 @@
+<div *ngIf="models.open">
+  <div class="reference__backdrop" (click)="close()"></div>
+  <div class="reference__body">
+    <h3>{{ models.reference.title }}</h3>
+    <p [innerHtml]="models.reference.body"></p>
+    <div class="reference__input-group">
+      <input id="dontShowThisReference" type="checkbox" (change)="dontShowThisReference()">
+      <label for="dontShowThisReference">Не показывать это сообщение</label>
+    </div>
+    <div class="reference__input-group">
+      <input id="dontShowAnyReference" type="checkbox" (change)="dontShowAnyReference()">
+      <label for="dontShowAnyReference">Не показывать все сообщения</label>
+    </div>
+  </div>
+</div>
